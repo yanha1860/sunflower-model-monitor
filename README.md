@@ -1,4 +1,5 @@
-ElisticAPM,Rocketmq support apm,OpenTracing,OpenTelemetry
+* ElisticAPM,Rocketmq support apm,OpenTracing,OpenTelemetry
+* 支持对Rocketmq,SpringGateway,XxlJob组件的ElasticAPM监控
 
 # 背景
 
