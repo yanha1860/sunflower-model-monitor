@@ -25,5 +25,5 @@ Elastic APM默认是不支持对一些中间件进行链路追踪的，这会导
   * [XxlJob](https://github.com/yanha1860/sunflower-model-monitor/blob/main/src/main/java/com/sunflower/model/monitor/apm/XxlJobApmMonitor.java)
     * <img src="https://github.com/yanha1860/sunflower-model-monitor/blob/main/src/main/resources/img/XxlJob.png"> 
   * [SpringGateway](https://github.com/yanha1860/sunflower-model-monitor/blob/main/src/main/java/com/sunflower/model/monitor/apm/SpringGatewayMonitor.java)
-    * <img src="https://github.com/yanha1860/sunflower-model-monitor/blob/main/src/main/resources/img/SpringGatewayOfAPM.png"> 
+    * <img src="https://github.com/yanha1860/sunflower-model-monitor/blob/main/src/main/resources/img/SpringGatewayOfAPM.jpg"> 
 
