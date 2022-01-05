@@ -5,7 +5,6 @@ import java.util.Locale;
 
 import javax.annotation.Resource;
 
-import cn.hutool.core.util.ObjectUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -14,16 +13,14 @@ import org.springframework.context.MessageSource;
 import org.springframework.core.Ordered;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferUtils;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 
 import com.alibaba.fastjson.JSON;
-import com.yesoulchina.service.common.BizException;
-import com.yesoulchina.service.common.ResultMsg;
 
+import cn.hutool.core.util.ObjectUtil;
 import co.elastic.apm.api.ElasticApm;
 import co.elastic.apm.api.Scope;
 import co.elastic.apm.api.Transaction;
@@ -80,10 +77,10 @@ public class SpringGatewayMonitor implements GlobalFilter, Ordered {
             ServerHttpResponse response = exchange.getResponse();
             ServerHttpRequest request = exchange.getRequest();
             if (!ObjectUtil.isEmpty(request.getPath())) {
-                transaction.addLabel("labels.url.path",  request.getPath().toString());
+                transaction.addLabel("labels.url.path", request.getPath().toString());
             }
             if (!ObjectUtil.isEmpty(request.getBody())) {
-                transaction.addLabel("labels.body.original",  request.getBody().toString());
+                transaction.addLabel("labels.body.original", request.getBody().toString());
 
             }
             final DataBuffer bodyDataBuffer = response.bufferFactory().allocateBuffer();
